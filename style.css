@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman",Times, sans-serif;
+    background-color: #f0f0f0;
+}
+/* làm nền */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/static/images/anhnen4.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Giảm độ đậm của ảnh (0.1 - 1.0) */
+    background-color: rgba(255, 255, 255, 0.3); /* Lớp phủ trắng nhẹ giúp làm nhạt */
+    z-index: -1;
+}
+
+
+.header {
+    text-align: center;
+    font-size: 32px; /* cỡ chữ của Welcome... */
+    margin: 40px 0 20px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* căn giữa của các section */
+    margin: 40px auto; /* khoảng cách so với tiêu đề header */
+    width: 60%; /* 60% Giảm độ rộng để tạo sự cân đối */
+}
+
+.content-hidden {
+    display: none;
+    margin-top: 10px;
+}
+
+.content-visible {
+    display: block;
+}
+/* Hiệu ứng fade-in */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
+.section:hover {
+    background-color: #f0f0f0; /*làm hiệu ứng ẩn hiện trạng thái của section*/
+}
+
+.section {
+    width: 900px; /*điều chỉnh độ dài của khung chữ nhật*/
+    padding: 20px; /*chỉnh độ rộng dọc*/
+    margin: 10px auto; /* khoảng cách các mục nội dung*/
+    background-color: white;
+    border: 1px solid #ddd; /*tạo khung chữ nhật với border-radius*/
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.plus {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    margin: 40px auto;
+    font-size: 20px;
+    color: black;
+
+}
+
+/* của Education */
+.education {
+    display: flex; /*đưa vào cùng 1 dòng */
+    gap: 10px; /* khoảng cách giữa ảnh 3 cái ảnh*/
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+.avatar1{
+    width: 70px; /* thu nhỏ ảnh để chừa chỗ cho thông tin */
+    height: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin: 0px 10px; /* khoảng cách từ viền ngoài của đối tượng (ảnh, text, div,...) đến các đối tượng xung quanh hoặc viền của khung chứa (container). */
+    margin-bottom: 20px;
+    transform: translate(0px, -15px);
+}
+.infor-educa{
+    font-size: 22px;
+    font-weight: normal;
+    color: dimgray; /*chữ xám*/
+    transform: translate(0px, -20px);
+    margin-bottom: -40px; /* chỗ này chỉnh kc lề dưới từ Faculty of  mecha */
+    line-height: 22px;
+}
+.spaceebetween{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
